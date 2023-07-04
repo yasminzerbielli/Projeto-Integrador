@@ -12,48 +12,67 @@
 }
 
 #quadrado {
-    border-left: 7px black solid ;
-    border-right: 7px black solid ;
+    border-left: 7px black solid;
+    border-right: 7px black solid;
     width: 20em;
     height: 20em;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(90deg, rgba(227, 253, 255, 1),
+     rgba(135, 182, 178, 1), rgba(136,182,178,1), 
+     rgba(136, 182, 178, 1), rgba(136,182,178,1), 
+     rgba(136,182,178,1), rgba(227,253,255,1))
 }
 
 #retangulo {
-    border: 7px black solid ;
+    border: 7px black solid;
     width: 25em;
-    height: 5em;
+    height: 4.5em;
     border-radius: 10px;
+    background: linear-gradient(90deg, rgba(228,245,255,1), 
+    rgba(142, 215, 199, 1), rgba(228, 245, 255, 1), 
+    rgba(228,245,255,1), rgba(142,215,199,1))
 }
 
 #retangulo-cima {
-    border: 7px black solid ;
+    border: 7px black solid;
     width: 25em;
     height: 2em;
     border-radius: 10px;
+    background: linear-gradient(90deg, rgba(228,245,255,1),
+     rgba(142, 215, 199, 1), rgba(228, 245, 255, 1),
+      rgba(228,245,255,1), rgba(142,215,199,1))
 }
 
 #quadrado-dentro {
     width: 15em;
     height: 100%;
-    border-left: 7px black solid ;
-    border-right: 7px black solid ;
+    border-left: 7px black solid;
+    border-right: 7px black solid;
     position: relative;
+    background-color: white;            /mudar quando tiver um fundo no original/
+
 }
 
 #quadrado-maisdentro {
     width: 100%;
     height: 1.5em;
-    border-top: 7px black solid ;
-    border-bottom: 7px black solid ;
+    border-top: 7px black solid;
+    border-bottom: 7px black solid;
     margin-top: 2.5em;
+    animation-name: apoio;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    display: block;
+    animation-timing-function: ease-in-out;
+    background: linear-gradient(360deg, rgba(227, 253, 255, 1),
+     rgba(227,253,255,1), rgba(185, 236, 232, 1))
 }
 
 #pincel {
-    position: absolute;
     margin-top: -3.6em;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -62,46 +81,88 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation-name: pincel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pincel {
+    0% {left: 0px;top: 80px}
+    19% {top: 76px;}
+    25% {left: 80px;}
+    48% {top: 200px;}
+    50% {left: 80px;}
+    70% {top: 90px;}
+    75% {left: -80px;}
+    90% {top: 80px;}
+    100% {left: 0px; top:80px}
+}
+
+@keyframes apoio {
+    0% {top: 0px}
+    19% {top: 3px}
+    48% {top: 127px;}
+    70% {top: 17px;}
+    90% {top: 3px;}
 }
 
 #cabeca {
     width: 4em;
     height: 4em;
-    border: 7px black solid ;
-    background-color: white;
+    border: 7px black solid;
+    border-radius: 5px;
+    background: radial-gradient(circle at 125% 50%,rgba(135, 182, 178, 1), rgba(227, 253, 255, 1), rgba(227,253,255,1), rgba(136, 182, 178, 1))
 }
 
 #ponta {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 25px 25px 0 25px;
-    border-color: #000000 transparent transparent transparent;
+    border-width: 10px 20px 0 20px ;
+    border-color: #000000 transparent transparent;
+    
 }
 
 #quadrado-maisdentro-debaixo {
     width: 100%;
-    border: 7px black solid ;
+    border-top: 7px black solid;
+    border-bottom: 7px black solid;
     height: 1em;
+    background: linear-gradient(360deg, rgba(228,245,255,1), rgba(142, 215, 199, 1), rgba(228, 245, 255, 1), rgba(228,245,255,1))
 }
 
-.suporte {
-    width: 15px;
-    height: 15px;
-    border-left: 7px black solid ;
-    border-right: 7px black solid ;
-}
-
-#partedebaixo{
+#partedebaixo {
     position: absolute;
     width: 100%;
     bottom: 0;
     display: flex;
     align-items: center;
-    border: 1px black solid ;
+    border: 1px black solid;
     flex-direction: column;
+}
+
+.suporte {
+    width: 15px;
+    height: 15px;
+    border-left: 7px black solid;
+    border-right: 7px black solid;
+    background: linear-gradient(90deg, rgba(228,245,255,1), 
+    rgba(142, 215, 199, 1), rgba(228, 245, 255, 1), 
+    rgba(228,245,255,1), rgba(142,215,199,1))
+
 }
 
 #suportes {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+}
+
+#gambiarra {
+    width: 120px;
+    height: 15px;
+    background-color: white
 }
