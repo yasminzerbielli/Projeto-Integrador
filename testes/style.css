@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
+=======
+>>>>>>> 09785cac777a611f840c95d6683c525cf71a4c54
 body{
   		background-image: url(https://jooinn.com/images/paper-17.jpg);
   		background-size: 100%;
       background-repeat: no-repeat;
       background-attachment: fixed;
   	}
+<<<<<<< HEAD
 #tudo {
   background-color: aqua;
   opacity: 0.1;
 }
+=======
+
+>>>>>>> 09785cac777a611f840c95d6683c525cf71a4c54
 .navbar{
   position: fixed;
   transition: 0.8s;
@@ -51,9 +58,15 @@ body{
     .para h3{
       text-align: center;
       margin-top: 15%;
+<<<<<<< HEAD
       color: #000000;
       font-family: 'Hammersmith One';
       font-size: 3em;
+=======
+      color: #fff;
+      font-family: nyala;
+      font-size: 44px;
+>>>>>>> 09785cac777a611f840c95d6683c525cf71a4c54
     }
     body::-webkit-scrollbar-track
 {
